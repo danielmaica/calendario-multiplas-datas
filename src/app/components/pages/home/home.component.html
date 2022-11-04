@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Datepicker Multiplo Fluid</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field class="full-width">
+        <ngx-multiple-dates
+            [matDatepicker]="pickerWithToggleButton"
+            placeholder="Selecione a(s) data(s) desejadas."
+            name="modelWithToggleButton"
+            [(ngModel)]="modelWithToggleButton"
+        >
+        </ngx-multiple-dates>
+        <mat-datepicker-toggle
+            matPrefix
+            [for]="pickerWithToggleButton"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #pickerWithToggleButton></mat-datepicker>
+        </mat-form-field>
+        <pre>{{ modelWithToggleButton | json }}</pre>
+    </mat-card-content>
+</mat-card>
